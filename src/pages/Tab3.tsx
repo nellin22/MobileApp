@@ -1,28 +1,74 @@
-import { IonContent,
+import { IonApp,
+  IonButton,
+  IonButtons,
+  IonContent,
   IonHeader,
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonMenu,
+  IonMenuToggle,
   IonPage,
   IonTitle,
-  IonToolbar } from '@ionic/react';
+  IonToolbar, } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import { journal, menu, settings, addCircleOutline, calendar, } from "ionicons/icons";
 import './Tab3.css';
 
 const Tab3: React.FC = () => {
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Calendar</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Calendar</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Calendar page" />
-      </IonContent>
-    </IonPage>
+    <IonApp>
+        <IonMenu contentId="main-content">
+          <IonHeader>
+            <IonToolbar>
+              <IonTitle>Menu</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <IonContent className="ion-padding">
+            <IonList>
+              <IonMenuToggle autoHide>
+                <IonItem button routerLink="/tab1">
+                  <IonIcon slot="start" icon={journal}></IonIcon>
+                  <IonLabel>My Journal</IonLabel>
+                </IonItem>
+                <IonItem routerLink="/tab2">
+                  <IonIcon slot="start" icon={addCircleOutline}></IonIcon>
+                  <IonLabel>Create</IonLabel>
+                </IonItem>
+                <IonItem routerLink="/tab3">
+                  <IonIcon slot="start" icon={calendar}></IonIcon>
+                  <IonLabel>Calender</IonLabel>
+                </IonItem>
+                <IonItem routerLink="/settings">
+                  <IonIcon slot="start" icon={settings}></IonIcon>
+                  <IonLabel>Settings</IonLabel>
+                </IonItem>
+              </IonMenuToggle>
+            </IonList>
+          </IonContent>
+        </IonMenu>
+        <IonPage id="main-content">
+          <IonHeader>
+            <IonToolbar>
+              <IonButtons slot="start">
+                <IonMenuToggle>
+                  <IonButton>
+                    <IonIcon slot="start" icon={menu}></IonIcon>
+                  </IonButton>
+                </IonMenuToggle>
+              </IonButtons>
+              <IonTitle>Header</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <IonContent className="ion-padding">
+            <h1>Calender page</h1>
+            <p>Here's your calender.</p>
+            <p>It will help you keep track of everything important!</p>
+          </IonContent>
+        </IonPage>
+      </IonApp>
   );
 };
 

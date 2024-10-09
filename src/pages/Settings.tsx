@@ -1,25 +1,25 @@
 import { IonApp,
-  IonButton,
-  IonButtons,
-  IonContent,
-  IonHeader,
-  IonIcon,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonListHeader,
-  IonMenu,
-  IonMenuToggle,
-  IonPage,
-  IonTitle,
-  IonToolbar, } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import { journal, menu, settings, addCircleOutline, calendar, } from "ionicons/icons";
-import './Tab2.css';
-
-const Tab2: React.FC = () => {
-  return (
-    <IonApp>
+    IonButton,
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonIcon,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonMenu,
+    IonMenuToggle,
+    IonPage,
+    IonTitle,
+    IonToolbar, } from '@ionic/react';
+  import ExploreContainer from '../components/ExploreContainer';
+  import { journal, menu, settings, addCircleOutline, calendar, } from "ionicons/icons";
+  import './Settings.css';
+  
+  const Settings: React.FC = () => {
+    return (
+        <IonApp>
         <IonMenu contentId="main-content">
           <IonHeader>
             <IonToolbar>
@@ -63,13 +63,13 @@ const Tab2: React.FC = () => {
             </IonToolbar>
           </IonHeader>
           <IonContent className="ion-padding">
-            <h1>Create page</h1>
-            <p>Here you will create new content.</p>
-            <p>Click on the plus symbol to begin!</p>
+            <h1>Welcome back!</h1>
+            <p>Your work will be listed here.</p>
+            <p>Is it empty? Let's go create something new!</p>
           </IonContent>
         </IonPage>
       </IonApp>
-  );
-};
-
-export default Tab2;
+    );
+  };
+  
+  export default Settings;
