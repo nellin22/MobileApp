@@ -1,0 +1,36 @@
+.ion-padding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+p {
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+ion-title {
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+.note-item {
+    margin: 0 auto;
+    margin-right: 50%;
+    width: 50% !important;
+    height: 100px !important;
+    font-size: 16px;
+    font-family: 'Roboto';
+    padding: 5px;
+}
+  .note-input {
+    width: 90% !important;
+    height: 100px !important;
+    font-size: 16px;
+    font-family: 'Roboto';
+    padding: 5px;
+}

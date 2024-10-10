@@ -7,17 +7,25 @@ import { IonApp,
   IonItem,
   IonLabel,
   IonList,
-  IonListHeader,
   IonMenu,
   IonMenuToggle,
   IonPage,
+  IonTextarea,
   IonTitle,
   IonToolbar, } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import { journal, menu, settings, addCircleOutline, calendar, } from "ionicons/icons";
 import './Tab2.css';
+import { useState } from 'react';
 
 const Tab2: React.FC = () => {
+  const [noteContent, setNoteContent] = useState('');
+  const saveNote = () => {
+    const existingNotes = JSON.parse(localStorage.getItem('notes') || '[]');
+    const newNote = { content: noteContent, date: new Date() };
+    localStorage.setItem('notes', JSON.stringify([existingNotes, newNote]));
+    alert('Note saved!');
+    setNoteContent('');
+  };
   return (
     <IonApp>
         <IonMenu contentId="main-content">
@@ -59,14 +67,25 @@ const Tab2: React.FC = () => {
                   </IonButton>
                 </IonMenuToggle>
               </IonButtons>
-              <IonTitle>Header</IonTitle>
+              <IonTitle>Create notes</IonTitle>
             </IonToolbar>
           </IonHeader>
           <IonContent className="ion-padding">
-            <h1>Create page</h1>
+            <h1>Create your own notes!</h1>
             <p>Here you will create new content.</p>
-            <p>Click on the plus symbol to begin!</p>
-          </IonContent>
+          <IonItem className="note-item">
+            <IonLabel position="floating">Write your note:</IonLabel>
+            <IonTextarea className="note-input"
+              value={noteContent}
+              onIonChange={(e) => setNoteContent(e.detail.value!)}
+              placeholder="Start typing..."
+            />
+          </IonItem>
+          <IonButton onClick={saveNote}>
+          <IonIcon icon={addCircleOutline}></IonIcon>
+            Save Notes
+          </IonButton>
+        </IonContent>
         </IonPage>
       </IonApp>
   );

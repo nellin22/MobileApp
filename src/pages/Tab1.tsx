@@ -7,13 +7,11 @@ import { IonApp,
   IonItem,
   IonLabel,
   IonList,
-  IonListHeader,
   IonMenu,
   IonMenuToggle,
   IonPage,
   IonTitle,
   IonToolbar, } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import { journal, menu, settings, addCircleOutline, calendar, } from "ionicons/icons";
 import './Tab1.css';
 
@@ -59,13 +57,13 @@ const Tab1: React.FC = () => {
                   </IonButton>
                 </IonMenuToggle>
               </IonButtons>
-              <IonTitle>Header</IonTitle>
+              <IonTitle>My journal</IonTitle>
             </IonToolbar>
           </IonHeader>
           <IonContent className="ion-padding">
             <h1>Welcome back!</h1>
-            <p>Your work will be listed here.</p>
-            <p>Is it empty? Let's go create something new!</p>
+            <p>Your notes will be listed here.</p>
+            <p>Is it empty? Let's go create something new on the 'Create' page!</p>
           </IonContent>
         </IonPage>
       </IonApp>
