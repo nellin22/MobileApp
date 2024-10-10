@@ -47,7 +47,7 @@ const Tab2: React.FC = () => {
                 </IonItem>
                 <IonItem routerLink="/tab3">
                   <IonIcon slot="start" icon={calendar}></IonIcon>
-                  <IonLabel>Calender</IonLabel>
+                  <IonLabel>Calendar</IonLabel>
                 </IonItem>
                 <IonItem routerLink="/settings">
                   <IonIcon slot="start" icon={settings}></IonIcon>

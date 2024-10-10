@@ -12,7 +12,7 @@ import { IonApp,
   IonPage,
   IonTitle,
   IonToolbar, } from '@ionic/react';
-import { journal, menu, settings, addCircleOutline, calendar, } from "ionicons/icons";
+import { journal, menu, settings, addCircleOutline, calendar, brush, } from "ionicons/icons";
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
@@ -37,7 +37,7 @@ const Tab1: React.FC = () => {
                 </IonItem>
                 <IonItem routerLink="/tab3">
                   <IonIcon slot="start" icon={calendar}></IonIcon>
-                  <IonLabel>Calender</IonLabel>
+                  <IonLabel>Calendar</IonLabel>
                 </IonItem>
                 <IonItem routerLink="/settings">
                   <IonIcon slot="start" icon={settings}></IonIcon>
@@ -61,7 +61,10 @@ const Tab1: React.FC = () => {
             </IonToolbar>
           </IonHeader>
           <IonContent className="ion-padding">
-            <h1>Welcome back!</h1>
+          <div className="header-content">
+            <h1 >Welcome to Journal!</h1>
+            <IonIcon icon={brush} className="brush"></IonIcon>
+          </div>
             <p>Your notes will be listed here.</p>
             <p>Is it empty? Let's go create something new on the 'Create' page!</p>
           </IonContent>

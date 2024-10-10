@@ -61,7 +61,7 @@ const Tab3: React.FC = () => {
             </IonToolbar>
           </IonHeader>
           <IonContent className="ion-padding">
-            <h1>Calendar page</h1>
+            <h1>Here's your calendar</h1>
             <p>Here's your calendar.</p>
             <p>It will help you keep track of everything important!</p>
           </IonContent>

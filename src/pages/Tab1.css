@@ -18,3 +18,10 @@ ion-title {
     font-family: 'Roboto';
     font-weight: bold;
   }
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  .brush {
+    margin-left: 5px;
+  }
